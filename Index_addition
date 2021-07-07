@@ -1,0 +1,35 @@
+import java.util.Scanner;
+ class Index_Addition
+ { 
+ 	public static void main(String args[])
+ 	 {
+ 	 	 int i,sum=0;
+ 	 	 Scanner sc=new Scanner(System.in);
+ 	 	 System.out.println("enter size");
+ 	 	 int n=sc.nextInt();
+ 	 	 int a[]=new int[n];
+ 	 	 System.out.println("enter elements");
+ 	 	 for(i=0;i<n;i++)
+ 	 	 a[i]=sc.nextInt();
+ 	 	 System.out.println("enter left index");
+ 	 	  int left=sc.nextInt();
+ 	 	  System.out.println("enter right index");
+ 	 	  int right=sc.nextInt();
+ 	 	  for(i=left;i<=right;i++)
+ 	 	       {
+ 	 	       	a[i]+=0;
+ 	 	               System.out.print(a[i]+" ");
+ 	 	                sum=sum+a[i]; 
+ 	 	        }
+ 	 	        System.out.println();
+ 	 	        System.out.println("the sum of numbers in given range is "+sum);
+ 	 } 
+}
+
+OUTPUT:-
+enter size 6
+enter elements 2 3 4 5 6 7
+enter left index 1
+enter right index 4
+3 4 5 6
+the sum of numbers in given range is 18	
