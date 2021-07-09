@@ -1,0 +1,85 @@
+import java.util.Scanner;
+class Swapping2D
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter row size");
+		
+		int r1=sc.nextInt();
+		System.out.println("enter column size");
+		int c1=sc.nextInt();
+		int a[][]=new int[r1][c1];
+		System.out.println("enter elements");
+		int i,j;
+			for(i=0;i<r1;i++)
+			for(j=0;j<c1;j++)
+			a[i][j]=sc.nextInt();	
+			System.out.println("enter row size");
+		int r2=sc.nextInt();		
+		System.out.println("enter column size");
+		int c2=sc.nextInt();
+		int b[][]=new int[r2][c2];
+		System.out.println("enter elements");
+		for(i=0;i<r2;i++)
+		for(j=0;j<c2;j++)
+		b[i][j]=sc.nextInt();
+//Swapping starts here upto now we read the array elements
+	if(r1==r2&&c1==c2)
+	{
+for(i=0;i<r1;i++)
+{
+	for(j=0;j<c1;j++)
+	{
+		int temp=a[i][j];
+		a[i][j]=b[i][j];
+		b[i][j]=temp;
+	}
+}
+
+System.out.println("After swap a matrix is");
+for(i=0;i<r1;i++)
+{
+for(j=0;j<c1;j++)
+{
+System.out.print(a[i][j]+" ");
+}
+System.out.println();
+}
+System.out.println("After swap b matrix is");
+for(i=0;i<r2;i++)
+{
+	for(j=0;j<c2;j++)
+	{
+		System.out.print(b[i][j]+" ");
+	}
+System.out.println();
+}
+}
+else
+System.out.println("Swapping not possible");
+}
+}
+
+
+OUTPUT:-
+enter row size 3
+enter column size 3
+enter elements
+1 2 3
+4 5 6
+7 8 9
+enter row size 3
+enter column size 3
+enter elements
+10 11 12
+13 14 15
+16 17 18
+After swap a matrix is
+10 11 12
+13 14 15
+16 17 18
+After swap b matrix is
+1 2 3
+4 5 6
+7 8 9
