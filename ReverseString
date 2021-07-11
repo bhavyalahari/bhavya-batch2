@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Reverse
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter string");
+String str=sc.next();
+char ch[]=str.toCharArray();
+int n=ch.length;
+int j=n-1;
+for(int i=0;i<j;i++)
+{
+	char temp=ch[i];
+	ch[i]=ch[j];
+	ch[j]=temp;	
+	j--;
+}
+System.out.println("reversed string is");
+String s1=new String(ch);
+System.out.println(s1);
+}
+}
+
+
+OUTPUT:-
+enter string
+Hello
+reversed string is
+olleH
