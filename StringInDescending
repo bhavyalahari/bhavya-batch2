@@ -1,0 +1,33 @@
+import java.util.*;
+class StringSortUarray
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter string");
+String str=sc.next();
+char ch[]=str.toCharArray();
+Arrays.sort(ch);
+int n=ch.length;
+int j=n-1;
+for(int i=0;i<j;i++)
+{
+	char t=ch[i];
+	ch[i]=ch[j];
+	ch[j]=t;
+	j--;
+}
+String s=new String(ch);
+System.out.println("given string in descending order is "+s);
+}
+}
+
+
+
+
+
+OUTPUT:-
+enter string
+battle
+given string in descending order is 
+ttleba
