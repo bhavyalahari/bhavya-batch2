@@ -1,0 +1,22 @@
+import java.util.*;
+class StringSortUarray
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter string");
+String str=sc.next();
+char ch[]=str.toCharArray();
+Arrays.sort(ch);
+String s=new String(ch);
+System.out.println("given string in ascending order "+s);
+}
+}
+
+
+
+
+OUTPUT:-
+enter string
+battle
+given string in ascending order is abeltt
