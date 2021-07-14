@@ -1,0 +1,34 @@
+import java.util.*;
+class Factorial
+{
+    public void display()
+    {
+        int fact=1;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a number");
+        int n=sc.nextInt();
+        for(int i=n;i>1;i--)
+        {
+            fact=fact*i;
+        }
+        System.out.println("the  factorial of given number is " +fact);
+    }
+    public void show()
+    {
+        display();
+    }
+}
+public class Main
+{
+	public static void main(String args[])
+        {
+	   Factorial obj=new Factorial();
+	   obj.show();
+         }
+}
+
+
+
+OUTPUT:-
+enter a number 6
+the factorial of given number is 720
