@@ -1,0 +1,30 @@
+import java.util.*;
+class maths
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter principal amount");
+		float p=sc.nextFloat();
+		System.out.println("enter time period");
+		float t=sc.nextFloat();
+		System.out.println("enter rate of interest");
+		float r=sc.nextFloat();
+		Interest(p,t,r);
+	}
+	static void Interest(float p,float t,float r)
+	{
+		float s=(p*t*r)/100;
+		System.out.println("total amount is "+s);
+	}
+}
+
+
+OUTPUT:-
+enter principal amount
+5000.00
+enter time period
+2.00
+enter rate of intrest
+1.50
+total amount is 150.0
