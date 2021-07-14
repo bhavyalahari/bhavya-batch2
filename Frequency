@@ -1,0 +1,41 @@
+import java.util.*;
+class Array
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int i;
+		System.out.println("enter array size");
+		int n=sc.nextInt();
+		System.out.println("enter elements");
+		int a[]=new int[n];
+		for(i=0;i<n;i++)
+		a[i]=sc.nextInt();
+		System.out.println("enter an element to search");
+		int key=sc.nextInt();
+		ArrayCount(a,key);
+	}
+	static void ArrayCount(int array[],int key)
+	{
+		int count=0;
+		for(int i=0;i<array.length;i++)
+		{
+			if(array[i]==key)
+			{
+				count++;
+			}
+		}
+		System.out.println("frequency of an element   "+key+"  is "+count);		
+	}
+}
+
+
+
+OUTPUT:-
+enter array size
+5
+enter elements
+1 2 3 2 2
+enter an element to search
+2
+frequency of an element 2 is 3
