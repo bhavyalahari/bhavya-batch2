@@ -1,0 +1,140 @@
+import java.util.*;
+class MenuBasedList
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		LinkedList<Integer> LL=new LinkedList<Integer>();
+		int opt=0;
+		do
+		{
+			System.out.println("1->begin insert");
+			System.out.println("2->End insert");
+			System.out.println("3->position insert");
+			System.out.println("4->begin delete");
+			System.out.println("5->end delete");
+			System.out.println("6->position delete");
+			System.out.println("7->display");
+			System.out.println("8->exit");
+			System.out.println("enter your choice");
+			opt=sc.nextInt();
+			switch(opt)
+			{
+				case 1:
+				System.out.println("enter value");
+				int a=sc.nextInt();
+				LL.addFirst(a);
+				break;
+				case 2:
+				System.out.println("enter a value");
+				int b=sc.nextInt();
+				LL.addLast(b);
+				break;
+				case 3:
+				System.out.println("enter index & value to be inserted");
+				int index=sc.nextInt();
+				int value=sc.nextInt();
+				LL.add(index,value);
+				break;
+				case 4:
+				LL.removeFirst();
+				break;
+				case 5:
+				LL.removeLast();
+				break;
+				case 6:
+				System.out.println("enter index value to remove an element");
+				int id=sc.nextInt();
+				LL.remove(id);
+				break;
+				case 7:
+				System.out.println(LL);
+				break;
+				case 8:
+				System.exit(0);
+				break;
+				default:
+				System.out.println("invalid option");
+			}
+		}
+			while(opt<=8);
+	}
+	
+}
+
+
+
+
+OUTPUT:-
+1->begin insert
+2->end insert
+3->position insert
+4->begin delete
+5->end delete
+6->position delete
+7->display
+8->exit
+enter your choice
+1
+enter value
+3
+1->begin insert
+2->end insert
+3->position insert
+4->begin delete
+5->end delete
+6->position delete
+7->display
+8->exit
+enter your choice
+1
+enter value
+5
+1->begin insert
+2->end insert
+3->position insert
+4->begin delete
+5->end delete
+6->position delete
+7->display
+8->exit
+enter your choice
+1
+enter value
+4
+1->begin insert
+2->end insert
+3->position insert
+4->begin delete
+5->end delete
+6->position delete
+7->display
+8->exit
+enter your choice
+7
+[4,5,3]
+1->begin insert
+2->end insert
+3->position insert
+4->begin delete
+5->end delete
+6->position delete
+7->display
+8->exit
+enter your choice 
+9
+invalid option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
