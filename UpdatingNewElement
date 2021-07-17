@@ -1,0 +1,46 @@
+import java.util.*;
+class name 
+{
+	public static void main(String args[]) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter size");
+		int n = sc.nextInt();
+		LinkedList<Integer> l = new LinkedList<Integer>();
+		System.out.println("enter elements");
+		for (int i = 0; i < n; i++)
+			l.add(sc.nextInt());
+		System.out.println("enter the value to be replaced");
+		int key = sc.nextInt();
+		boolean st = l.contains(key);
+		if (st)
+		 {
+			int k = l.indexOf(key);
+			System.out.println("enter the new value");
+			int NewValue = sc.nextInt();
+			l.set(k, NewValue);
+
+			System.out.println("updated list is:- " + l);
+		} 
+		else 
+		{
+			System.out.println(st);
+		}
+	}
+}
+
+
+OUTPUT:-
+enter size
+5
+enter elements
+1
+2
+3
+4
+5
+enter the value to be replaced
+5
+enter the new value
+9
+updated list is:- [1,2,3,4,9]
