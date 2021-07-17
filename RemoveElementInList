@@ -7,12 +7,13 @@ class List
  	   System.out.println("enter n");
  	    int n=sc.nextInt();
  	//    int k;
- 	     LinkedList<Integer> data = new LinkedList<Integer>(); 
+ 	     LinkedList<Integer> data = new LinkedList<Integer>();
+             System.out.println("enter elements"); 
  	     for (int i= 0; i < n; i++)
  	      { 
  	      	data.add(sc.nextInt()); 
- 	      	}
- 	      	 System.out.println(data); 
+ 	       }
+                 System.out.println("enter an element to remove");
  	      	 int key=sc.nextInt();
  	      	  boolean st = data.contains(key); 
  	       if(st)
@@ -22,17 +23,18 @@ class List
  	      	    System.out.println(data);
  	      	   	  }
  	      	   	   else
- { 
- 	System.out.println("Element not found"); 
- 	} 
- 	}
- 	 }
+                             System.out.println("Element not found"); 
+ 	
+   }
+}
 
 
 
 OUTPUT:-
 enter n
 4
+enter elements
 1 2 3 4
+enter an element to remove
 2
 [1,3,4]
