@@ -1,0 +1,25 @@
+class Solution{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+      Map<String,Integer> m= new HashMap<String,Integer>();
+     for(int i=0;i<n;i++)
+     {
+         m.put(keys[i],arr[i]);
+     }
+     if(m.containsKey(s))
+     {
+     return m.get(s);
+     }
+     else
+     {
+     return -1;
+     }
+    }
+}
+
+
+OUTPUT:-
+4
+{bha 1 vya 2 lah 3 ari 5}
+bha
+1
