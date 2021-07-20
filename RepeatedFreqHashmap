@@ -1,0 +1,46 @@
+import java.util.*;
+public class Freq
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("enter elements");
+		for(int i=0;i<n;i++)
+		{
+		arr[i]=sc.nextInt();
+		}
+		Map<Integer,Integer> Mp=new HashMap<Integer,Integer>();
+		for(int i:arr)
+		{
+			if(Mp.containsKey(i))
+			{
+				Mp.put(i,Mp.get(i)+1);
+			}
+			else
+			{
+				Mp.put(i,1);
+			}
+		}		
+		for(int j:arr)
+{
+		if(Mp.get(j)<=1)	
+		Mp.remove(j);
+}
+		System.out.println(Mp);	
+	}
+}
+
+
+OUTPUT:-
+enter size
+5
+enter elements
+1
+1
+1
+2
+2
+{1=3,2=2}
