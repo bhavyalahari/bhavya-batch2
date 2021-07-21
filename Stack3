@@ -1,0 +1,50 @@
+import java.util.*;
+public class stack3
+{
+     stack3(Stack<Integer> st3)
+      {
+         int even = 0, odd = 0;
+         if (st3.size() % 2 == 1)
+             System.out.println("Stack is not balanced");
+         else {
+             for (Integer i : st3) 
+             {
+                 if (i % 2 == 0)
+                     even++;
+                 else
+                     odd++;
+             }
+             if (even == odd)
+                 System.out.println("Stack is balanced");
+             else
+                 System.out.println("Stack is not balanced");
+         }
+     }
+    public static void main(String[] args) 
+    {
+        Scanner sc= new Scanner(System.in);
+        Stack<Integer> st= new Stack<Integer>();
+        System.out.println("Enter no.of elements");
+        int n= sc.nextInt();
+        System.out.println("Enter elements");
+        for(int i=1;i<=n;i++)
+            st.push(sc.nextInt());
+        stack3 BL= new stack3(st);
+    }
+}
+
+
+
+
+
+OUTPUT:-
+Enter no.of elements
+6
+Enter elements
+1
+2
+3
+4
+5
+6
+Stack is balanced
