@@ -1,0 +1,42 @@
+import java.util.*;
+public class stack2
+ {
+    public static void main(String[] args)
+     {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter size of array");
+        int n=sc.nextInt();
+        int a[]= new int[n];
+        Stack<Integer> st1= new Stack<Integer>();
+        System.out.println("Enter elements");
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            st1.push(a[i]);
+        }
+        System.out.println("remaining elements are: ");
+        remove(st1,n);
+    }
+    static void remove(Stack<Integer> st1,int n)
+    {
+        for(Integer i: st1)
+        {
+            if(i%2==0)
+                System.out.print(i+" ");
+        }
+    }
+}
+
+
+
+
+OUTPUT:-
+Enter size of array
+5
+Enter elements
+1
+2
+4
+6
+7
+remaining elements are:
+2 4 6
