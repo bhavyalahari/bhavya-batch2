@@ -1,0 +1,26 @@
+class Solution {
+    public int firstUniqChar(String s) {
+        Stack<Character> stk= new Stack<Character>();
+        for(int i=0;i<s.length();i++)
+            stk.push(s.charAt(i));
+        int res=0;
+        for(int i=0;i<s.length();i++){
+            res=0;
+            for(int j=0;j<s.length();j++)
+            {
+                if(stk.get(i)==stk.get(j)  && i!=j){
+                    res=-1;
+                    break;
+                }
+                    
+            }
+            if(res==0){
+                res=i;
+                break;
+            }
+        }
+                    
+         return res;   
+        }
+
+    }
