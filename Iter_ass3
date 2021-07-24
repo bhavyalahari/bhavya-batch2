@@ -1,0 +1,64 @@
+import java.util.*;
+class iterass3
+{
+	public static void main(String[] args)
+	 {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		String b[]=new String[n];
+		System.out.println("enter keys");
+		for(int i=0;i<n;i++)
+		{
+		a[i]=sc.nextInt();
+		}
+		System.out.println("enter values");
+		for(int j=0;j<n;j++)
+		{
+		b[j]=sc.next();
+		}
+		//System.out.println(b);
+		HashMap<Integer,String> map=new HashMap<Integer,String>();
+	                  for(int k=0;k<n;k++)
+		{
+		map.put(a[k],b[k]);
+		}
+			Iterator it= map.values().iterator ();
+			Iterator it1=map.keySet().iterator();
+			System.out.println("keys and values in map are: ");
+while(it1.hasNext() && it.hasNext())
+{
+Integer I=(Integer)it1.next();
+String i= (String) it.next();
+System.out.println(I+"-->"+i);
+}
+	}
+}
+
+
+
+
+
+OUTPUT:-
+enter size
+3
+enter keys
+5
+7
+9
+enter values
+hi
+hello
+hai
+keys and values in map are:
+5-->hi
+7-->hello
+9-->hai
+
+
+
+
+
+
+
